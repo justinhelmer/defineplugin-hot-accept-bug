@@ -1,0 +1,25 @@
+{
+  "name": "defineplugin-hot-accept-bug",
+  "version": "1.0.0",
+  "description": "Demonstrate a bug https://github.com/webpack/webpack/issues/6919",
+  "scripts": {
+    "setup": "npm i && npm run dev",
+    "build": "webpack --config webpack.conf.js",
+    "start": "node server",
+    "dev": "concurrently \"npm run start\" \"sleep 2 && opn http://localhost:3000\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinhelmer/defineplugin-hot-accept-bug.git"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.1.0",
+    "opn-cli": "^3.1.0",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-hot-middleware": "^2.21.2"
+  }
+}
